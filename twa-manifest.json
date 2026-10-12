@@ -1,6 +1,6 @@
 {
   "packageId": "com.sdpc.physiotherapy",
-  "host": "sdpc-indore.example.com",
+  "host": "textapp.nexteck.uk",
   "name": "SDPC",
   "launcherName": "SDPC",
   "display": "standalone",
@@ -13,8 +13,8 @@
   "backgroundColor": "#F0FDFA",
   "enableNotifications": true,
   "startUrl": "/",
-  "iconUrl": "https://sdpc-indore.example.com/assets/icons/icon-512x512.png",
-  "maskableIconUrl": "https://sdpc-indore.example.com/assets/icons/icon-512x512.png",
+  "iconUrl": "https://textapp.nexteck.uk/assets/icons/icon-512x512.png",
+  "maskableIconUrl": "https://textapp.nexteck.uk/assets/icons/icon-512x512.png",
   "splashScreenFadeOutDuration": 300,
   "signingKey": {
     "path": "./sdpc-release-key.keystore",
@@ -26,18 +26,18 @@
     {
       "name": "Physio Videos",
       "shortName": "Videos",
-      "url": "https://sdpc-indore.example.com/videos",
-      "chosenIconUrl": "https://sdpc-indore.example.com/assets/icons/icon-192x192.png"
+      "url": "https://textapp.nexteck.uk/videos",
+      "chosenIconUrl": "https://textapp.nexteck.uk/assets/icons/icon-192x192.png"
     },
     {
       "name": "Contact Clinic",
       "shortName": "Contact",
-      "url": "https://sdpc-indore.example.com/contact",
-      "chosenIconUrl": "https://sdpc-indore.example.com/assets/icons/icon-192x192.png"
+      "url": "https://textapp.nexteck.uk/contact",
+      "chosenIconUrl": "https://textapp.nexteck.uk/assets/icons/icon-192x192.png"
     }
   ],
   "generatorApp": "bubblewrap-cli",
-  "webManifestUrl": "https://sdpc-indore.example.com/manifest.json",
+  "webManifestUrl": "https://textapp.nexteck.uk/manifest.json",
   "fallbackType": "customtabs",
   "enableSiteSettingsShortcut": true,
   "isChromeOSOnly": false,

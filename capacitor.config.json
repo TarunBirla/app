@@ -4,11 +4,11 @@
   "webDir": "public",
   "bundledWebRuntime": false,
   "server": {
-    "url": "https://sdpc-indore.example.com",
+    "url": "https://textapp.nexteck.uk",
     "cleartext": false,
     "allowNavigation": [
-      "sdpc-indore.example.com",
-      "*.sdpc-indore.example.com"
+      "textapp.nexteck.uk",
+      "*.nexteck.uk"
     ]
   },
   "plugins": {
