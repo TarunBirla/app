@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240">
+  <defs>
+    <linearGradient id="navyTeal" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1B3A"/>
+      <stop offset="60%" stop-color="#0F766E"/>
+      <stop offset="100%" stop-color="#14B8A6"/>
+    </linearGradient>
+    <linearGradient id="amberAccent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#F59E0B"/>
+      <stop offset="100%" stop-color="#F97316"/>
+    </linearGradient>
+  </defs>
+  <rect width="240" height="240" rx="54" fill="url(#navyTeal)"/>
+  <circle cx="120" cy="120" r="96" fill="none" stroke="rgba(255,255,255,0.14)" stroke-width="2"/>
+  <!-- Stylized Spine Vertebrae -->
+  <g fill="#14B8A6" opacity="0.9">
+    <ellipse cx="120" cy="48" rx="14" ry="6"/>
+    <ellipse cx="120" cy="64" rx="18" ry="6.5"/>
+    <ellipse cx="120" cy="81" rx="21" ry="7"/>
+    <ellipse cx="120" cy="99" rx="17" ry="6"/>
+  </g>
+  <!-- Pulse Line -->
+  <path d="M 34 128 L 78 128 L 94 102 L 112 154 L 130 92 L 146 138 L 160 128 L 206 128"
+        fill="none" stroke="url(#amberAccent)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- SDPC Typography -->
+  <text x="120" y="192" text-anchor="middle" font-family="Poppins, Arial, sans-serif" font-weight="800" font-size="48" fill="#FFFFFF" letter-spacing="3">SDPC</text>
+  <text x="120" y="214" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-weight="600" font-size="12" fill="#A7F3D0" letter-spacing="4">PHYSIOTHERAPY</text>
+</svg>

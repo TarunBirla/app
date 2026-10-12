@@ -1,0 +1,33 @@
+{
+  "appId": "com.sdpc.physiotherapy",
+  "appName": "SDPC",
+  "webDir": "public",
+  "bundledWebRuntime": false,
+  "server": {
+    "url": "https://sdpc-indore.example.com",
+    "cleartext": false,
+    "allowNavigation": [
+      "sdpc-indore.example.com",
+      "*.sdpc-indore.example.com"
+    ]
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 1800,
+      "launchAutoHide": true,
+      "backgroundColor": "#0B1B3A",
+      "androidSplashResourceName": "splash",
+      "androidScaleType": "CENTER_CROP",
+      "showSpinner": false
+    },
+    "StatusBar": {
+      "style": "DARK",
+      "backgroundColor": "#0B1B3A"
+    }
+  },
+  "android": {
+    "allowMixedContent": false,
+    "captureInput": true,
+    "webContentsDebuggingEnabled": false
+  }
+}

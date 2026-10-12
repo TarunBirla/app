@@ -1,0 +1,55 @@
+{
+  "name": "SDPC - Dr. Mahesh Sahu Physiotherapy",
+  "short_name": "SDPC",
+  "description": "Move Free. Live Pain-Free. Physiotherapy & Rehabilitation by Dr. Mahesh Sahu in Indore, Madhya Pradesh.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#F0FDFA",
+  "theme_color": "#0B1B3A",
+  "categories": ["medical", "health", "fitness"],
+  "icons": [
+    {
+      "src": "/assets/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Physio Videos",
+      "short_name": "Videos",
+      "description": "Watch guided physiotherapy exercises",
+      "url": "/videos",
+      "icons": [{ "src": "/assets/icons/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Treatment Categories",
+      "short_name": "Categories",
+      "description": "Explore 19 specialized physiotherapy treatments",
+      "url": "/categories",
+      "icons": [{ "src": "/assets/icons/icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Contact Clinic",
+      "short_name": "Contact",
+      "description": "Call or WhatsApp Dr. Mahesh Sahu",
+      "url": "/contact",
+      "icons": [{ "src": "/assets/icons/icon-192x192.png", "sizes": "192x192" }]
+    }
+  ]
+}

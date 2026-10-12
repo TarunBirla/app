@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="320" height="320">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1B3A"/>
+      <stop offset="55%" stop-color="#0F766E"/>
+      <stop offset="100%" stop-color="#14B8A6"/>
+    </linearGradient>
+    <linearGradient id="coatGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+  </defs>
+  <rect width="320" height="320" rx="48" fill="url(#bgGrad)"/>
+  <circle cx="260" cy="60" r="80" fill="rgba(255,255,255,0.06)"/>
+  <circle cx="50" cy="260" r="70" fill="rgba(20,184,166,0.15)"/>
+  <!-- Shoulders / Lab Coat -->
+  <path d="M 56 320 C 56 238 100 212 160 212 C 220 212 264 238 264 320 Z" fill="url(#coatGrad)"/>
+  <!-- Inner scrub / shirt -->
+  <path d="M 132 214 L 160 278 L 188 214 Z" fill="#0F766E"/>
+  <!-- Coat lapels -->
+  <path d="M 122 214 L 154 286 L 136 320 L 98 320 Z" fill="#F8FAFC"/>
+  <path d="M 198 214 L 166 286 L 184 320 L 222 320 Z" fill="#F8FAFC"/>
+  <!-- Stethoscope / Physio emblem around neck -->
+  <path d="M 118 220 C 118 265 140 275 160 275 C 180 275 202 265 202 220" fill="none" stroke="#0B1B3A" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="192" cy="264" r="10" fill="#F59E0B" stroke="#0B1B3A" stroke-width="3"/>
+  <!-- Neck -->
+  <rect x="142" y="180" width="36" height="40" rx="14" fill="#F1C27D"/>
+  <!-- Head -->
+  <ellipse cx="160" cy="134" rx="46" ry="54" fill="#F1C27D"/>
+  <!-- Hair -->
+  <path d="M 114 126 C 110 86 134 68 162 68 C 192 68 210 86 206 126 C 202 104 188 92 160 92 C 134 92 118 104 114 126 Z" fill="#1E293B"/>
+  <!-- Eyes & Warm Smile -->
+  <circle cx="143" cy="132" r="4.5" fill="#0F172A"/>
+  <circle cx="177" cy="132" r="4.5" fill="#0F172A"/>
+  <path d="M 135 120 Q 143 116 151 120" fill="none" stroke="#1E293B" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 169 120 Q 177 116 185 120" fill="none" stroke="#1E293B" stroke-width="3" stroke-linecap="round"/>
+  <path d="M 146 156 Q 160 168 174 156" fill="none" stroke="#0F172A" stroke-width="3.5" stroke-linecap="round"/>
+  <!-- Verified Badge -->
+  <circle cx="268" cy="268" r="28" fill="#F59E0B"/>
+  <path d="M 256 268 L 264 276 L 281 259" fill="none" stroke="#FFFFFF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

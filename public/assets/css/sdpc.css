@@ -1,0 +1,605 @@
+/*
+|--------------------------------------------------------------------------
+| SDPC Physiotherapy - Material Design 3 Inspired Mobile-First Stylesheet
+|--------------------------------------------------------------------------
+| Primary Navy: #0B1B3A
+| Deep Teal: #0F766E
+| Bright Teal: #14B8A6
+| Amber CTA: #F59E0B
+| Mint Background: #F0FDFA
+| White Surface: #FFFFFF
+| Main Text: #0F172A
+| Muted Text: #64748B
+| Border: #E2E8F0
+| WhatsApp Green: #25D366
+*/
+
+:root {
+    --sdpc-navy: #0B1B3A;
+    --sdpc-deep-teal: #0F766E;
+    --sdpc-bright-teal: #14B8A6;
+    --sdpc-amber: #F59E0B;
+    --sdpc-orange: #F97316;
+    --sdpc-mint-bg: #F0FDFA;
+    --sdpc-surface: #FFFFFF;
+    --sdpc-text: #0F172A;
+    --sdpc-muted: #64748B;
+    --sdpc-border: #E2E8F0;
+    --sdpc-whatsapp: #25D366;
+    --sdpc-hero-gradient: linear-gradient(135deg, #0B1B3A 0%, #0F766E 100%);
+    --sdpc-cta-gradient: linear-gradient(135deg, #F59E0B 0%, #F97316 100%);
+    --sdpc-radius-lg: 24px;
+    --sdpc-radius-xl: 28px;
+    --sdpc-radius-md: 20px;
+    --sdpc-shadow-sm: 0 4px 16px rgba(11, 27, 58, 0.05);
+    --sdpc-shadow-md: 0 10px 30px rgba(11, 27, 58, 0.08);
+    --sdpc-shadow-lg: 0 18px 42px rgba(11, 27, 58, 0.14);
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--sdpc-mint-bg);
+    color: var(--sdpc-text);
+    margin: 0;
+    padding: 0;
+    padding-bottom: calc(88px + env(safe-area-inset-bottom, 0px));
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+@media (min-width: 992px) {
+    body {
+        padding-bottom: 0;
+    }
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Poppins', sans-serif;
+    color: var(--sdpc-navy);
+    letter-spacing: -0.015em;
+}
+
+.text-muted-sdpc {
+    color: var(--sdpc-muted) !important;
+}
+
+.text-teal-sdpc {
+    color: var(--sdpc-deep-teal) !important;
+}
+
+.bg-navy-sdpc {
+    background-color: var(--sdpc-navy) !important;
+}
+
+/* ==========================================================================
+   Top App Bar & Desktop Navigation
+   ========================================================================== */
+.sdpc-appbar {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--sdpc-border);
+    transition: box-shadow 0.25s ease;
+}
+
+.sdpc-brand-logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(15, 118, 110, 0.2);
+}
+
+.sdpc-desktop-nav .nav-link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.94rem;
+    color: var(--sdpc-text);
+    padding: 0.55rem 1.1rem;
+    border-radius: 999px;
+    transition: all 0.2s ease;
+}
+
+.sdpc-desktop-nav .nav-link:hover {
+    color: var(--sdpc-deep-teal);
+    background-color: rgba(20, 184, 166, 0.1);
+}
+
+.sdpc-desktop-nav .nav-link.active {
+    background: var(--sdpc-hero-gradient);
+    color: #FFFFFF !important;
+    box-shadow: 0 4px 12px rgba(15, 118, 110, 0.25);
+}
+
+/* Online / Offline Status Pill */
+.sdpc-net-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: #ECFDF5;
+    color: #065F46;
+    border: 1px solid #A7F3D0;
+}
+
+.sdpc-net-badge.is-offline {
+    background: #FEF2F2;
+    color: #991B1B;
+    border-color: #FECACA;
+}
+
+.sdpc-net-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #10B981;
+}
+
+.sdpc-net-badge.is-offline .sdpc-net-dot {
+    background: #EF4444;
+}
+
+/* ==========================================================================
+   Hero Section & Cards
+   ========================================================================== */
+.sdpc-hero {
+    background: var(--sdpc-hero-gradient);
+    border-radius: var(--sdpc-radius-xl);
+    color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--sdpc-shadow-lg);
+}
+
+.sdpc-hero::before {
+    content: '';
+    position: absolute;
+    top: -60px;
+    right: -60px;
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(20, 184, 166, 0.32) 0%, rgba(20, 184, 166, 0) 70%);
+    pointer-events: none;
+}
+
+.sdpc-hero h1, .sdpc-hero h2, .sdpc-hero h3 {
+    color: #FFFFFF;
+}
+
+.sdpc-card {
+    background: var(--sdpc-surface);
+    border: 1px solid var(--sdpc-border);
+    border-radius: var(--sdpc-radius-lg);
+    box-shadow: var(--sdpc-shadow-sm);
+    transition: transform 0.24s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.24s ease, border-color 0.24s ease;
+}
+
+.sdpc-card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sdpc-shadow-md);
+    border-color: rgba(20, 184, 166, 0.45);
+}
+
+.sdpc-doctor-banner {
+    background: linear-gradient(145deg, #FFFFFF 0%, #F8FAFC 100%);
+    border-radius: var(--sdpc-radius-xl);
+    border: 1px solid var(--sdpc-border);
+    box-shadow: var(--sdpc-shadow-md);
+}
+
+.sdpc-doctor-avatar {
+    width: 88px;
+    height: 88px;
+    border-radius: 22px;
+    object-fit: cover;
+    border: 3px solid var(--sdpc-bright-teal);
+    box-shadow: 0 8px 20px rgba(15, 118, 110, 0.2);
+}
+
+.sdpc-doctor-avatar-lg {
+    width: 128px;
+    height: 128px;
+    border-radius: 28px;
+    object-fit: cover;
+    border: 4px solid var(--sdpc-bright-teal);
+    box-shadow: 0 12px 28px rgba(11, 27, 58, 0.25);
+}
+
+/* ==========================================================================
+   Buttons & Quick Actions
+   ========================================================================== */
+.btn-sdpc-amber {
+    background: var(--sdpc-cta-gradient);
+    color: #FFFFFF !important;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 16px;
+    padding: 0.72rem 1.35rem;
+    box-shadow: 0 6px 18px rgba(245, 158, 11, 0.32);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-sdpc-amber:hover, .btn-sdpc-amber:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(245, 158, 11, 0.42);
+    color: #FFFFFF !important;
+}
+
+.btn-sdpc-teal {
+    background: var(--sdpc-hero-gradient);
+    color: #FFFFFF !important;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 16px;
+    padding: 0.72rem 1.35rem;
+    box-shadow: 0 6px 18px rgba(15, 118, 110, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-sdpc-teal:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(15, 118, 110, 0.36);
+}
+
+.btn-sdpc-whatsapp {
+    background-color: var(--sdpc-whatsapp);
+    color: #FFFFFF !important;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 16px;
+    padding: 0.72rem 1.35rem;
+    box-shadow: 0 6px 18px rgba(37, 211, 102, 0.28);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-sdpc-whatsapp:hover {
+    background-color: #1EBE5D;
+    transform: translateY(-2px);
+}
+
+.btn-sdpc-outline {
+    background-color: #FFFFFF;
+    color: var(--sdpc-navy) !important;
+    border: 1.5px solid var(--sdpc-border);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    border-radius: 16px;
+    padding: 0.68rem 1.25rem;
+    transition: all 0.2s ease;
+}
+
+.btn-sdpc-outline:hover {
+    border-color: var(--sdpc-deep-teal);
+    color: var(--sdpc-deep-teal) !important;
+    background-color: #F0FDFA;
+}
+
+/* Quick Action Tile (Home Screen) */
+.sdpc-quick-action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+    background: var(--sdpc-surface);
+    border: 1px solid var(--sdpc-border);
+    border-radius: 20px;
+    padding: 1rem 0.5rem;
+    color: var(--sdpc-text);
+    box-shadow: var(--sdpc-shadow-sm);
+    transition: all 0.2s ease;
+    height: 100%;
+}
+
+.sdpc-quick-action:hover {
+    transform: translateY(-3px);
+    border-color: var(--sdpc-bright-teal);
+    box-shadow: var(--sdpc-shadow-md);
+    color: var(--sdpc-deep-teal);
+}
+
+.sdpc-quick-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.35rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ==========================================================================
+   Video Cards & Interactive Player
+   ========================================================================== */
+.sdpc-video-card {
+    border-radius: var(--sdpc-radius-lg);
+    overflow: hidden;
+    background: var(--sdpc-surface);
+    border: 1px solid var(--sdpc-border);
+    box-shadow: var(--sdpc-shadow-sm);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sdpc-video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sdpc-shadow-md);
+}
+
+.sdpc-video-thumb-wrap {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: var(--sdpc-navy);
+    overflow: hidden;
+}
+
+.sdpc-video-thumb-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.sdpc-video-card:hover .sdpc-video-thumb-wrap img {
+    transform: scale(1.04);
+}
+
+.sdpc-play-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(11,27,58,0.12) 0%, rgba(11,27,58,0.55) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.sdpc-play-btn-circle {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    background: var(--sdpc-cta-gradient);
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    box-shadow: 0 8px 24px rgba(245, 158, 11, 0.45);
+    transition: transform 0.2s ease;
+}
+
+.sdpc-video-card:hover .sdpc-play-btn-circle {
+    transform: scale(1.1);
+}
+
+.sdpc-duration-badge {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    background: rgba(11, 27, 58, 0.85);
+    backdrop-filter: blur(6px);
+    color: #FFFFFF;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 8px;
+}
+
+.sdpc-sample-pill {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(15, 118, 110, 0.92);
+    color: #FFFFFF;
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 999px;
+    letter-spacing: 0.02em;
+}
+
+/* Filter Chips */
+.sdpc-chip-scroll {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    scrollbar-width: none;
+}
+
+.sdpc-chip-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.sdpc-filter-chip {
+    white-space: nowrap;
+    border: 1.5px solid var(--sdpc-border);
+    background: #FFFFFF;
+    color: var(--sdpc-text);
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.84rem;
+    font-weight: 500;
+    padding: 0.48rem 1.05rem;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sdpc-filter-chip:hover {
+    border-color: var(--sdpc-bright-teal);
+    color: var(--sdpc-deep-teal);
+}
+
+.sdpc-filter-chip.active {
+    background: var(--sdpc-hero-gradient);
+    color: #FFFFFF;
+    border-color: transparent;
+    box-shadow: 0 4px 12px rgba(15, 118, 110, 0.25);
+}
+
+/* Category Icon Box */
+.sdpc-cat-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(20, 184, 166, 0.16) 0%, rgba(15, 118, 110, 0.08) 100%);
+    color: var(--sdpc-deep-teal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+/* ==========================================================================
+   Native-Style Fixed Mobile Bottom Navigation Bar
+   ========================================================================== */
+.sdpc-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1040;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border-top: 1px solid var(--sdpc-border);
+    box-shadow: 0 -6px 24px rgba(11, 27, 58, 0.07);
+    padding-top: 6px;
+    padding-bottom: calc(6px + env(safe-area-inset-bottom, 0px));
+}
+
+.sdpc-bottom-nav-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sdpc-bottom-nav-item {
+    flex: 1;
+}
+
+.sdpc-bottom-nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--sdpc-muted);
+    font-size: 0.72rem;
+    font-weight: 600;
+    padding: 4px 0;
+    transition: color 0.2s ease;
+}
+
+.sdpc-bottom-nav-pill {
+    width: 48px;
+    height: 30px;
+    border-radius: 999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-bottom: 2px;
+    transition: all 0.22s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.sdpc-bottom-nav-link.active {
+    color: var(--sdpc-navy);
+}
+
+.sdpc-bottom-nav-link.active .sdpc-bottom-nav-pill {
+    background: rgba(20, 184, 166, 0.2);
+    color: var(--sdpc-deep-teal);
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   PWA Install Banner & Toast Notification
+   ========================================================================== */
+.sdpc-pwa-banner {
+    background: var(--sdpc-navy);
+    color: #FFFFFF;
+    border-radius: 20px;
+    padding: 0.9rem 1.15rem;
+    box-shadow: var(--sdpc-shadow-lg);
+    display: none;
+}
+
+.sdpc-pwa-banner.show {
+    display: flex;
+}
+
+.sdpc-toast-container {
+    position: fixed;
+    bottom: 94px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1080;
+    pointer-events: none;
+}
+
+.sdpc-toast {
+    background: var(--sdpc-navy);
+    color: #FFFFFF;
+    padding: 0.65rem 1.25rem;
+    border-radius: 999px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    box-shadow: 0 10px 28px rgba(11, 27, 58, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: all 0.25s ease;
+}
+
+.sdpc-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Video Player Container */
+.sdpc-player-wrapper {
+    position: relative;
+    border-radius: var(--sdpc-radius-lg);
+    overflow: hidden;
+    background: #0B1B3A;
+    box-shadow: var(--sdpc-shadow-lg);
+    aspect-ratio: 16 / 9;
+}
+
+.sdpc-player-wrapper video,
+.sdpc-player-wrapper canvas {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}

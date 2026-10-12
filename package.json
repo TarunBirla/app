@@ -1,0 +1,24 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "cap:init": "npx cap init SDPC com.sdpc.physiotherapy --web-dir=public",
+        "cap:add:android": "npx cap add android",
+        "cap:sync": "npx cap sync android",
+        "cap:open:android": "npx cap open android",
+        "twa:init": "npx @bubblewrap/cli init --manifest=https://sdpc-indore.example.com/manifest.json",
+        "twa:build": "npx @bubblewrap/cli build"
+    },
+    "devDependencies": {
+        "@capacitor/android": "^6.0.0",
+        "@capacitor/cli": "^6.0.0",
+        "@capacitor/core": "^6.0.0",
+        "@capacitor/splash-screen": "^6.0.0",
+        "@capacitor/status-bar": "^6.0.0",
+        "axios": "^1.1.2",
+        "laravel-vite-plugin": "^0.7.2",
+        "vite": "^4.0.0"
+    }
+}

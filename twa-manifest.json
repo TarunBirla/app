@@ -1,0 +1,47 @@
+{
+  "packageId": "com.sdpc.physiotherapy",
+  "host": "sdpc-indore.example.com",
+  "name": "SDPC",
+  "launcherName": "SDPC",
+  "display": "standalone",
+  "themeColor": "#0B1B3A",
+  "themeColorDark": "#0B1B3A",
+  "navigationColor": "#FFFFFF",
+  "navigationColorDark": "#0B1B3A",
+  "navigationDividerColor": "#E2E8F0",
+  "navigationDividerColorDark": "#0B1B3A",
+  "backgroundColor": "#F0FDFA",
+  "enableNotifications": true,
+  "startUrl": "/",
+  "iconUrl": "https://sdpc-indore.example.com/assets/icons/icon-512x512.png",
+  "maskableIconUrl": "https://sdpc-indore.example.com/assets/icons/icon-512x512.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "./sdpc-release-key.keystore",
+    "alias": "sdpc-key-alias"
+  },
+  "appVersionName": "1.0.0",
+  "appVersionCode": 1,
+  "shortcuts": [
+    {
+      "name": "Physio Videos",
+      "shortName": "Videos",
+      "url": "https://sdpc-indore.example.com/videos",
+      "chosenIconUrl": "https://sdpc-indore.example.com/assets/icons/icon-192x192.png"
+    },
+    {
+      "name": "Contact Clinic",
+      "shortName": "Contact",
+      "url": "https://sdpc-indore.example.com/contact",
+      "chosenIconUrl": "https://sdpc-indore.example.com/assets/icons/icon-192x192.png"
+    }
+  ],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://sdpc-indore.example.com/manifest.json",
+  "fallbackType": "customtabs",
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "minSdkVersion": 21,
+  "orientation": "portrait"
+}
